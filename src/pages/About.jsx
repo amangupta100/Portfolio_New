@@ -17,7 +17,7 @@ export const About = () =>{
 ]
 
     return(
-        <div className={`${darkMode?"bg-black text-white":"bg-white text-black"} px-16 tb:px-8`}>
+        <div id="About" className={`${darkMode?"bg-black text-white":"bg-white text-black"} px-16 tb:px-8`}>
             <h1 className="mt-16 uppercase font-semibold text-zinc-400 text-xl lm:text-lg">Introduction</h1>
             <h1 className="text-8xl lm:text-5xl lm:min-h-16 min-h-28 font-semibold mt-2 bg-gradient-to-br to-[rgb(253,80,80)] from-[#ffeb0c] inline-block text-transparent bg-clip-text ">Overview .</h1>
            

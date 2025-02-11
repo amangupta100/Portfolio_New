@@ -20,11 +20,11 @@ export const Projects= () =>{
     }
 ]
     return(
-        <div className={`${darkMode?"bg-black text-white":"bg-white text-black"} w-full min-h-96`}>
+        <div id="Projects" className={`${darkMode?"bg-black text-white":"bg-white text-black"} w-full min-h-96`}>
             
-        <div className="w-[90%] min-h-full py-5 mx-auto">
-            <h1 className="text-xl mt-10 font-semibold text-zinc-400 uppercase">My works</h1>
-            <h1 className="text-8xl tb:text-5xl lm:text-5xl mt-5  bg-gradient-to-br to-[rgb(253,80,80)] from-[#ffeb0c]  text-transparent bg-clip-text  font-semibold min-h-28 ">Projects .</h1>
+        <div className="w-[90%] min-h-full mx-auto">
+            <h1 className="text-xl mt-10 lm:mt-7 font-semibold text-zinc-400 uppercase">My works</h1>
+            <h1 className="text-8xl tb:text-5xl lm:text-5xl mt-5 lm:min-h-16 lm:mt-2  bg-gradient-to-br to-[rgb(253,80,80)] from-[#ffeb0c]  text-transparent bg-clip-text  font-semibold min-h-28 ">Projects .</h1>
 
             <div className="py-10 lm:py-0 flex flex-wrap gap-8">
             {
@@ -33,7 +33,7 @@ export const Projects= () =>{
             <div key={idx} className="w-[360px] hover:shadow-2xl hover:shadow-zinc-400 duration-300 transition-all relative h-[390px] p-3 border-[1.6px] border-zinc-200 rounded-xl ">
 
            {
-            elem.link ?  <IoMdLink onClick={()=>window.open(elem.link)} className={`${darkMode?"text-black":"text-white"} absolute top-4 cursor-pointer right-14 text-2xl`}/>:null
+            elem.link ?  <IoMdLink onClick={()=>window.open(elem.link)} className={`text-black absolute top-4 cursor-pointer right-14 text-2xl`}/>:null
            }
            {
             elem.github? <img onClick={()=>window.open(elem.github)} src={github} className="w-10 top-2 cursor-pointer absolute right-2" alt="" />:null
@@ -49,7 +49,7 @@ export const Projects= () =>{
         </div>
 
         </div>
-        <button onClick={()=>window.open("https://github.com/amangupta100")} className="mx-[45%]  px-5 font-semibold min-w-44 hover:border-zinc-600 rounded-full border-[1.5px] border-zinc-300 py-3 my-5">More Projects</button>
+        <button onClick={()=>window.open("https://github.com/amangupta100")} className="h-14 lm:mx-[28%] mx-[45%] mb-10 px-5 font-semibold w-44 hover:border-zinc-600 rounded-full border-[1.5px] border-zinc-300 py-3">More Projects</button>
  
         </div>
     )

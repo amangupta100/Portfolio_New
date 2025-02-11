@@ -12,18 +12,18 @@ export const Home = () =>{
     const {darkMode} = useContext(ThemeContxt)
     return(
         <>
-            <div className={`${darkMode?"bg-black text-white":"bg-white text-black"} w-full lm:flex-col py-16 flex h-full`}>
-                <div className="w-[40%]  lD:w-[55%] lm:w-[80%] ml-20">
+            <div id='Home' className={`${darkMode?"bg-black text-white":"bg-white text-black"} w-full lm:flex-col py-16 flex h-full`}>
+                <div className="w-[40%] h-full mx-auto lD:w-[55%] lm:w-[80%] ml-20">
                     <img src={img} className='w-full' alt="" />
                 </div>
 
                 <div className="w-[60%] lm:w-full justify-center flex flex-col ">
-                    <div className="flex flex-col w-[50%] lm:mx-10 lD:w-[75%] tb:w-[95%] mx-auto">
+                    <div className="flex flex-col w-[50%] lm:mx-7 lD:w-[75%] tb:w-[95%] mx-auto">
                         <div className="flex justify-start  flex-col">
                             <h1 className='text-3xl lm:text-xl'>Hi, I'm</h1>
-                            <h1 className='text-5xl lm:text-3xl first-letter:font-semibold'>Aman Gupta</h1>
+                            <h1 className='text-5xl lm:text-3xl min-h-14'>Aman Gupta</h1>
                         </div>
-                        <h1 className='mt-2 text-xl font-normal'>Full Stack Developer</h1>
+                        <h1 className='text-xl font-normal'>Full Stack Developer</h1>
                         <div className="flex gap-3 mt-3">
                             <a href={resume} download>
                                 <button className={`${darkMode?"border-white":"border-black"} hover:border-zinc-400 transition-all duration-300 border-[1.6px] rounded-xl py-3 px-4`}>Download CV</button>

@@ -4,18 +4,19 @@ import { MenuContext } from "../context/MenuContext"
 import { MdOutlineLightMode } from "react-icons/md";
 import { CiDark } from "react-icons/ci";
 import { ThemeContxt } from "../context/ThemeContxt";
+import { Link } from "react-scroll";
 
 export const Navbar = () =>{
     const {setmenuCont,menuCont} = useContext(MenuContext)
     const {darkMode,setdarkMode} = useContext(ThemeContxt)
     return(
-        <div className={`${darkMode?"bg-black/70 text-white border-zinc-800":"bg-white/50 text-black border-zinc-200"} w-full fixed backdrop-blur-md py-3 border-[1.3px] z-50 flex items-center justify-around vtb:justify-between vtb:px-10`}>
-            <NavLink className="text-xl first-letter:text-2xl first-letter:font-semibold">Aman Gupta</NavLink>
+        <div className={`${darkMode?"bg-black/70 text-white border-zinc-800":"bg-white/50 text-black border-zinc-200"} w-full fixed backdrop-blur-md py-3 border-[1.3px] z-50 flex lm:px-7 items-center justify-around vtb:justify-between vtb:px-10`}>
+            <NavLink className="text-xl first-letter:text-2xl">Aman Gupta</NavLink>
             <div className="flex gap-10 vtb:hidden">
-                <NavLink className="text-lg">Home</NavLink>
-                <NavLink className="text-lg">About</NavLink>
-                <NavLink className="text-lg">Projects</NavLink>
-                <NavLink className="text-lg">Skills</NavLink>
+                <Link to="Home" className="relative cursor-pointer text-lg">Home</Link>
+                <Link to="About" className="relative cursor-pointer text-lg">About</Link>
+                <Link to="Projects" className="relative cursor-pointer text-lg">Projects</Link>
+                <Link to="Skills" className="relative cursor-pointer text-lg">Skills</Link>
             </div>
            <div className="flex gap-2 items-center">
            {
